@@ -16,6 +16,6 @@ app.use('/static',express.static('src/public'))
 
 app.get('/', (req,res)=>{
 
-    res.render('home', {layout: false})
+    res.render('home')
 })
 app.listen(5000,()=> console.log('Server is listening on http://localhost:5000...'))
