@@ -33,7 +33,7 @@ export default [
     year: "2024",
     imageUrl:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRX3yequSjHHrniIugvFQukcuduxWv8pgSOZQ&s",
-    rating: "6.6",
+    rating: 6.6,
     description:
       "After his home is conquered by the tyrannical emperors who now lead Rome, Lucius is forced to enter the Colosseum and must look to his past to find strength to return the glory of Rome to its people.",
   },

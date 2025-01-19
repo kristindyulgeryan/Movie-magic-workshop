@@ -16,7 +16,6 @@ movieController.post("/create", (req, res) => {
 
 movieController.get("/:movieId/details", (req, res) => {
   const movieId = req.params.movieId;
-  // TODO: Get movie data for movieID
   const movie = movieService.findOne(movieId);
 
   res.render("details", { movie });
