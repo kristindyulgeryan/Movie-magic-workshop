@@ -1,6 +1,6 @@
 export default [
   {
-    id: "1",
+    id: "a5e103bf-6cf0-40f5-9947-2b67087528ac9",
     title: "Jungle Cruise",
     genre: "Adventure",
     description:
@@ -12,7 +12,7 @@ export default [
     category: "Movie",
   },
   {
-    id: "2",
+    id: "a3e103bf-5pf0-40f5-9947-2b67087528gt5",
     title: "Man of Steel",
     genre: "Superhero",
     description:
@@ -23,5 +23,18 @@ export default [
     year: 2013,
     rating: 7.1,
     category: "Movie",
+  },
+  {
+    id: "aze103bf-5p14-40f5-9947-2b68757528gt5",
+    title: "Gladiator II",
+    category: "movie",
+    genre: "Action",
+    director: " Ridley Scott",
+    year: "2024",
+    imageUrl:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRX3yequSjHHrniIugvFQukcuduxWv8pgSOZQ&s",
+    rating: "6.6",
+    description:
+      "After his home is conquered by the tyrannical emperors who now lead Rome, Lucius is forced to enter the Colosseum and must look to his past to find strength to return the glory of Rome to its people.",
   },
 ];
