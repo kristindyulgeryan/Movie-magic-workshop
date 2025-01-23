@@ -2,9 +2,20 @@ import express from "express";
 import handlebars from "express-handlebars";
 import routes from "./routes.js";
 import showRatingHelper from "./helpers/rating-helper.js";
-
+import mongoose from "mongoose";
 const app = express();
 
+// db configuration
+try{
+  const uri= "mongodb://localhost:27017/magic-movies";
+mongoose.connect(uri)
+console.log("Connected to the database successfully")
+}catch(err){
+  console.log('Can not connect to the database')
+  console.error(err.message);
+}
+
+// handlebars configuration
 app.engine(
   "hbs",
   handlebars.engine({
@@ -18,10 +29,17 @@ app.engine(
 app.set("view engine", "hbs");
 app.set("views", "./src/views");
 
+
+// express configuration
 app.use("/static", express.static("src/public"));
 app.use(express.urlencoded({ extended: false })); // Learn express to parse form data
+
+
+// setup routes
 app.use(routes);
 
+
+// start server
 app.listen(5000, () =>
   console.log("Server is listening on http://localhost:5000...")
 );
