@@ -19,7 +19,7 @@ export default {
     return Movie.find({});
   },
   getOne(movieId) {
-    const result = Movie.findByIdAndDelete(movieId);
+    const result = Movie.findById(movieId);
     return result;
   },
   create(movieData) {

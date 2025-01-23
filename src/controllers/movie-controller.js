@@ -11,6 +11,7 @@ const movies = movieService.getAll(filter);
 
   res.render("search", { movies, filter });
 });
+
 movieController.get("/create", (req, res) => {
   res.render("create");
 });
