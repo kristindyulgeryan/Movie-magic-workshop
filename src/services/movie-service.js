@@ -1,5 +1,4 @@
-import { v4 as uuid } from "uuid";
-import movies from "../movies.js";
+
 import Movie from "../models/Movie.js";
 
 export default {
@@ -27,13 +26,13 @@ export default {
     return query;
   },
   create(movieData) {
-    // Todo: add IDs
-    const newId = uuid();
-    movies.push({
-      id: newId,
-      ...movieData,
-      rating: Number(movieData.rating),
-    });
-    return newId;
+   const result = Movie.create({
+    ...movieData,
+    rating: Number(movieData.rating),
+    year: Number(movieData.year),
+  });
+    
+    
+    return result;
   },
 };
