@@ -3,7 +3,7 @@ import Movie from "../models/Movie.js";
 
 export default {
   getAll(filter = {}) {
-    let query = Movie.where({})
+    let query = Movie.find({});
 
     if(filter.search){
 
