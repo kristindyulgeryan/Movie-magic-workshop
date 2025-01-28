@@ -4,11 +4,13 @@ import routes from "./routes.js";
 import showRatingHelper from "./helpers/rating-helper.js";
 import mongoose from "mongoose";
 const app = express();
+import 'dotenv/config';
 
 // db configuration
 try{
-  const uri= "mongodb://localhost:27017/magic-movies";
-mongoose.connect(uri)
+  const defaultUri= "mongodb://localhost:27017/magic-movies";
+  
+mongoose.connect(process.env.DATABASE_URI ?? defaultUri)
 console.log("Connected to the database successfully")
 }catch(err){
   console.log('Can not connect to the database')
